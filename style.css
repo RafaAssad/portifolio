@@ -65,3 +65,5 @@ div b{
     font-size: large;
     text-align: left;
 }
+img {border: 3px ridge rgb(0, 0, 0);
+    border-radius: 15%;}

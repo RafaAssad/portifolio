@@ -40,11 +40,11 @@ function App() {
           "I like to take responsibility to craft aesthetic user experience using modern frontend architecture."
         }
       />
-      {/* <motion.div
+      <motion.div
         className="cursor"
         variants={cursorVariants}
         animate="default"
-      /> */}
+      />
     </motion.div>
   );
 }

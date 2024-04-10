@@ -1,0 +1,42 @@
+* {
+  cursor: none !important;
+}
+
+.App {
+  --b: 1px;
+  --c: #d1d1d1;
+  --w: 120px;
+
+  border: var(--b) solid #0000;
+  --_g: #0000 90deg, var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+  background:
+    conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) 0 0 / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) 100% 100% / var(--_p);
+
+  margin: 40px;
+}
+
+body {
+  background-color: #1d1d20;
+  color: #d1d1d1;
+}
+
+.cursor {
+  background-color: black;
+  height: 12px;
+  width: 12px;
+  border: solid 2px white;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  box-shadow: 0 0 8px 3px #48abe0;
+}
+
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}

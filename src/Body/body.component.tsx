@@ -10,6 +10,7 @@ import {
   animate,
   Variants,
 } from "framer-motion";
+import Button from "../Button/button.component";
 
 type AnimatedTextProps = {
   text: string;
@@ -108,10 +109,23 @@ function Body({ text, skillText }: AnimatedTextProps) {
       <S.DisplayText>
         <motion.span>{displaytext}</motion.span>
       </S.DisplayText>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 4.0,
+          delay: 6,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
+        <S.ButtonWrapper>
+          <Button />
+        </S.ButtonWrapper>
+      </motion.div>
       <motion.h1
         initial={{ x: -1500 }}
         animate={{ x: 0 }}
-        transition={{ duration: 2, delay: 5 }}
+        transition={{ duration: 2, delay: 7 }}
         style={{ fontSize: isSmallScreen ? "16px" : "24px", paddingTop: "4%" }}
       >
         My Skills

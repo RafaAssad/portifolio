@@ -16,6 +16,12 @@ function Header() {
   const handleCheckboxChange = (name: string) => {
     setChecked(name);
 
+
+    const wppBorder = document.querySelector(".wppButton") as HTMLElement;
+    if(wppBorder) {
+      wppBorder.style.borderColor = name === "Dark" ? "#d1d1d1" : "#000000";
+    }
+
     const colorLabel = document.querySelector(
       ".MuiTypography-body1"
     ) as HTMLElement;

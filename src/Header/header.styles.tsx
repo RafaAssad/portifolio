@@ -37,7 +37,7 @@ export const LinkedInButton = styled(FaLinkedin)`
   height: 2.5em;
   width: 2.5em;
   padding: 12px;
-  //cursor: pointer;
+  cursor: pointer;
   &:hover {
     transform: scale(1.2);
   }
@@ -54,7 +54,7 @@ export const EmailButton = styled(BiLogoGmail)`
   height: 2.5em;
   width: 2.5em;
   padding: 12px;
-  //cursor: pointer;
+  cursor: pointer;
   &:hover {
     transform: scale(1.2);
   }

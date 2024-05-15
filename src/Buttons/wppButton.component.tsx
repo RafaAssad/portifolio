@@ -1,6 +1,6 @@
-import * as S from "./button.style";
+import * as S from "./wppButton.style";
 
-function Button() {
+function WppButton() {
   let wppTalk = () => {
     window.open("https://api.whatsapp.com/send?phone=5531991587744", "_blank");
   };
@@ -12,4 +12,4 @@ function Button() {
   );
 }
 
-export default Button;
+export default WppButton;

@@ -17,13 +17,22 @@ export const ImgWrapper = styled.div`
 `;
 
 export const ButtonWrapper = styled.div`
-  width: 15%;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
   padding-top: 40px;
-  padding-left: 70%;
+  padding-left: 65%;
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     padding-top: 20px;
-    padding-left: 50%;
+    padding-left: 30%;
   }
+`;
+
+export const MotionButton = styled.div`
+  padding-right: 3%;
 `;
 
 export const SkillsWrapper = styled.div`

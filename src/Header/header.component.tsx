@@ -17,6 +17,11 @@ function Header() {
     setChecked(name);
 
 
+    const resBorder = document.querySelector(".resButton") as HTMLElement;
+    if(resBorder) {
+      resBorder.style.borderColor = name === "Dark" ? "#d1d1d1" : "#000000";
+    }
+
     const wppBorder = document.querySelector(".wppButton") as HTMLElement;
     if(wppBorder) {
       wppBorder.style.borderColor = name === "Dark" ? "#d1d1d1" : "#000000";

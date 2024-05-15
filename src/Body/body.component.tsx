@@ -10,7 +10,8 @@ import {
   animate,
   Variants,
 } from "framer-motion";
-import Button from "../Button/button.component";
+import WppButton from "../Buttons/wppButton.component";
+import ResumeButton from "../Buttons/resumeButton.component";
 
 type AnimatedTextProps = {
   text: string;
@@ -119,7 +120,8 @@ function Body({ text, skillText }: AnimatedTextProps) {
         }}
       >
         <S.ButtonWrapper>
-          <Button />
+          <ResumeButton />
+          <WppButton />
         </S.ButtonWrapper>
       </motion.div>
       <motion.h1

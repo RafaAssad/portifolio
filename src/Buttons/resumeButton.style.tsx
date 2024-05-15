@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TalkButton = styled.button`
+export const ResumeButton = styled.button`
   color: black;
   display: flex;
   flex-direction: row;
@@ -11,6 +11,7 @@ export const TalkButton = styled.button`
   font-family: "Courier New", Courier, monospace;
   letter-spacing: 1px;
   padding: 13px 20px 13px;
+  margin-right: 5%;
   outline: 0;
   border: 1px solid #d1d1d1;
   cursor: pointer;
@@ -36,6 +37,7 @@ export const TalkButton = styled.button`
   }
   @media (max-width: 768px) {
     height: 55px;
+    margin-right: 15%;
   }
 `;
 

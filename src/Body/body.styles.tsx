@@ -99,3 +99,14 @@ export const OtherSkills = styled.img`
     padding: 0 10px 0 10px;
   }
 `;
+
+export const SectionDivider = styled.div`
+  width: 60px;
+  height: 2px;
+  background: #5d8aa8;
+  margin: 40px auto;
+  border-radius: 2px;
+  @media (max-width: 768px) {
+    margin: 24px auto;
+  }
+`;

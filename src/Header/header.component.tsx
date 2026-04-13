@@ -1,6 +1,7 @@
 import { Checkbox } from "../Checkbox/checkbox.component";
 import * as S from "./header.styles";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 let navigateToLinkedIn = () => {
   window.open("https://www.linkedin.com/in/rafaelassad/", "_blank");
@@ -16,14 +17,13 @@ function Header() {
   const handleCheckboxChange = (name: string) => {
     setChecked(name);
 
-
     const resBorder = document.querySelector(".resButton") as HTMLElement;
-    if(resBorder) {
+    if (resBorder) {
       resBorder.style.borderColor = name === "Dark" ? "#d1d1d1" : "#000000";
     }
 
     const wppBorder = document.querySelector(".wppButton") as HTMLElement;
-    if(wppBorder) {
+    if (wppBorder) {
       wppBorder.style.borderColor = name === "Dark" ? "#d1d1d1" : "#000000";
     }
 
@@ -61,24 +61,40 @@ function Header() {
 
   return (
     <S.Wrapper>
-      <S.CheckboxWrapper>
-        <Checkbox
-          isChecked={checked === "Dark"}
-          handleChange={() => handleCheckboxChange("Dark")}
-          label={"Dark"}
-          name={"Dark"}
-        />
-        <Checkbox
-          isChecked={checked === "Light"}
-          handleChange={() => handleCheckboxChange("Light")}
-          label={"Light"}
-          name={"Light"}
-        />
-      </S.CheckboxWrapper>
-      <S.SocialWrapper>
-        <S.EmailButton onClick={mailToMe} />
-        <S.LinkedInButton onClick={navigateToLinkedIn} />
-      </S.SocialWrapper>
+      <motion.div
+        initial={{ x: -40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <S.CheckboxWrapper>
+          <Checkbox
+            isChecked={checked === "Dark"}
+            handleChange={() => handleCheckboxChange("Dark")}
+            label={"Dark"}
+            name={"Dark"}
+          />
+          <Checkbox
+            isChecked={checked === "Light"}
+            handleChange={() => handleCheckboxChange("Light")}
+            label={"Light"}
+            name={"Light"}
+          />
+        </S.CheckboxWrapper>
+      </motion.div>
+      <motion.div
+        initial={{ x: 40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <S.SocialWrapper>
+          <motion.div whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.9 }}>
+            <S.EmailButton onClick={mailToMe} />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.15, rotate: -5 }} whileTap={{ scale: 0.9 }}>
+            <S.LinkedInButton onClick={navigateToLinkedIn} />
+          </motion.div>
+        </S.SocialWrapper>
+      </motion.div>
     </S.Wrapper>
   );
 }
